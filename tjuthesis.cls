@@ -1,7 +1,7 @@
 %% -------------------------------------------------------------------
 %% tjuthesis: LaTeX Template for Tianjin University PhD/Master Thesis
 %% Homepage: https://github.com/haimingz/tjuthesis
-%% Version: 2025/03/27
+%% Version: 2026-01-29
 %% -------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}

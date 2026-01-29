@@ -8,6 +8,10 @@
 
 ## 变动日志
 
+2026-01-09:
+
+- 弃用 cleveref：非必须且有严重的兼容性问题。
+
 2026-01 (感谢 @[Bob-Eric](https://github.com/Bob-Eric)):
 
 - 按照最新要求在论文扉页添加了天大logo。[#7](https://github.com/haimingz/tjuthesis/pull/7)
@@ -39,7 +43,6 @@ tjuthesis
 │  ├─ demo.tex               <--- 示例           
 │  ├─ publications.tex       <--- 发表论文情况说明  
 │  └─ titlepage.tex          <--- 扉页       
-├─ cleveref-format.sty       <--- 重新定义了一些 cleveref 命令（用于中文交叉引用）
 ├─ gb2312kai.ttf             <--- GB2312 楷体字体（版权声明页需要）
 ├─ main.pdf                  <--- 生成的 pdf 文档               
 ├─ main.tex                  <--- 主文件（编译的入口）
@@ -84,9 +87,9 @@ tjuthesis
 ```
 ### 编辑、编译
 
-除了 LaTeX 本体外，还需安装以下东西：
+为了避免各种兼容性的麻烦，推荐装完整版的 texlive 或 mactex。除了 LaTeX 本体外，还需安装以下东西：
 
-- 为了使用自动编译工具 latexmk，需安装 [perl](https://www.perl.org/get.html)。
+- 为了使用自动编译工具 latexmk，Windows 平台需安装 [perl](https://www.perl.org/get.html)。MacOS 和 Linux 通常自带无需安装。
 - 推荐使用 vscode 作为编辑器 + 拓展 latex-workshop。
 
 在 vscode + latex-workshop 的环境中，需要进行一系列设置。本模板提供了`.vscode/settings.json`文件，包含了所需的基础设置。
