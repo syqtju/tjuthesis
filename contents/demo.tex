@@ -1,28 +1,30 @@
 
-\chapter{章标题（一级标题）}
+\chapter{章标题（一级标题）}\label{ch1}
 
-\section{大段文字}
+\section{大段文字}\label{sec1.1}
 
-测试大段文字。\zhlipsum[1-2] % dummy text
+测试大段文字。\zhlipsum[1] % dummy text
 
 \begin{enumerate}[（1）]
     \item 测试列表条目 \zhlipsum[1]
     \item 测试列表条目 \zhlipsum[1]
 \end{enumerate}
 
+\section{图表公式引用}
+
 \subsection{图表}
 
 这里测试插入图片：
-\begin{figure}[!h]
+\begin{figure}[h]
     \centering\small
     \includegraphics[width=8cm]{example-image}
     \caption{示例图片}
     \label{fig1}
 \end{figure}
-\cref{fig1}所示为一张图片。
+\figref{fig1}所示为一张图片。
 
 这里测试插入表格：
-\begin{table}[!htb]
+\begin{table}[htb]
     \centering\small
     \caption{测试表格\citep{smith2024}}
     \begin{tabular}{ccc}
@@ -34,13 +36,13 @@
         3  & 王五 & 21 \\
         \bottomrule
     \end{tabular}
-    \label{tab:test}
+    \label{tab1}
 \end{table}
-\cref{tab:test}所示为一张表格。
+\tabref{tab1}所示为一张表格。
 
 \subsection{公式}
 
-测试公式，如\cref{eq1}所示：
+测试公式，如\eqref{eq1}所示：
 \begin{equation}\label{eq1}
     f(x) = \int_{-\infty}^\infty  \hat f(x)\xi\,e^{2 \pi i \xi x}  \,\mathrm{d}\xi 
 \end{equation}
@@ -59,38 +61,13 @@
 
 测试引用参考文献：\citet{zhang2023} 证明 \citet{lee2025} 的结论是正确的\citep{lisi2022}。
 测试引用多个参考文献：\citet{brown2026,zhao2024,wilson2023} 的结论是正确的\citep{zhou2025,zhao2024}。
-\citet{lisi2022}的研究表明\cite{zhang2023,lee2025,zhou2025}。
+\citet{lisi2022}的研究表明\cite{zhang2023,lee2025,zhou2025}，\chref{ch1}\secref{sec1.1}的结论是正确的。
 
 \chapter{另一个章标题（一级标题）}
-\label{ch:2}
 
 测试新一章是否正确地从奇数页开始。
 
-\section{复杂引用（基于Cleveref）}
-\label{sec:2.1}
-
-这里测试第二章图片标号：
-\begin{figure}[!h]
-    \centering\small
-    \includegraphics[width=5cm]{example-image}
-    \caption{示例图片}
-    \label{fig2}
-\end{figure}
-
-\begin{figure}[!h]
-    \centering\small
-    \includegraphics[width=5cm]{example-image}
-    \caption{示例图片}
-    \label{fig3}
-\end{figure}
-
-测试引用多张图片：\cref{fig1,fig2,fig3}。
-
-测试引用图片、公式和表格：\cref{fig1,eq1,tab:test}。
-
-测试引用章节：见\cref{ch:2,sec:2.1}。
-
-\subsection{脚注}
+同时测试中文English混排。
 
 这里测试脚注\footnote{这是一个脚注示例。}的效果。
 这是另一个脚注\footnote{这是第二个脚注示例。}。

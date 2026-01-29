@@ -187,3 +187,10 @@
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0bp}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0bp}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0bp}}m{#1}}
+
+% 定义图表公式章节引用的命令（可按需自定义，例如“式 (1-1) ”或“公式 1-1”）
+\newcommand{\figref}[1]{图~\ref{#1}~}
+\newcommand{\tabref}[1]{表~\ref{#1}~}
+\renewcommand{\eqref}[1]{式~(\ref{#1})~}
+\newcommand{\chref}[1]{第~\ref{#1}~章}
+\newcommand{\secref}[1]{第~\ref{#1}~节}
